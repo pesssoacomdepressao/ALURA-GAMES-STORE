@@ -2,13 +2,21 @@
     width: 24px;
     height: 24px;
     display: inline-block;
-    background-image: url("../img/Menu.svg");
+    background-image: url("../img/menu-burger.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
 
+.container__botao:checked~.container__rotulo>.cabeçalho__menu-hamburguer {
+    background-image: url("../img/MenuAberto.svg");
+}
+
+.container__botao:checked~.container__rotulo {
+    background: var(--roxo-claro);
+}
+
 .cabeçalho {
-    background-color: var(--branco);
+    background-color: var(--cor-cabecalho);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,38 +32,35 @@
     padding: 1em;
 }
 
-
-.lista-menu {
+.lista-menu{
     display: none;
     position: absolute;
     top: 100%;
-    width: 60vw;
+    width: 50vw;
 }
 
-.container__botao:checked~.lista-menu {
+.container__botao:checked ~ .lista-menu{
     display: block;
 }
 
-.lista-menu__titulo,
-.lista-menu__item {
+.lista-menu__titulo, .lista-menu__item {
     padding: 1em;
     background-color: var(--branco);
 }
 
-.lista-menu__titulo {
-    color: var(--laranja);
-    font-weight: 700;
+.lista-menu__titulo{
+    color: var(--roxo-oscuro);
+    text-transform: uppercase;
 }
 
-.lista-menu__link {
+.lista-menu__link{
     background: var(--azul-degrade);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-transform: uppercase;
 }
 
-.container__botao {
+.container__botao{
     display: none;
 }
 
@@ -65,6 +70,10 @@
 
 .opções {
     display: none
+}
+
+.container__texto {
+    display: none;
 }
 
 @media screen and (min-width: 1024px) {
@@ -115,10 +124,24 @@
         display: none;
     }
 
-}
+    .opções__botão:checked~.opções__rotulo>.opções__item {
+        background: var(--roxo-claro);
+        color: var(--branco);
+    }
 
-.container__texto {
-    display: none;
+    .opções__item {
+        padding: 2em 1em;
+    }
+
+    .lista-menu__item:hover {
+        background: var(--roxo-claro);
+    }
+
+    .lista-menu__item:hover>.lista-menu__link {
+        -webkit-text-fill-color: var(--branco);
+        text-decoration: none;
+    }
+
 }
 
 @media screen and (min-width: 1728px) {
@@ -127,7 +150,10 @@
         align-items: center;
         text-decoration: none;
         color: var(--preto);
-        padding-right: 30px;
+    }
+
+    .cabeçalho {
+        padding: 0 2em;
     }
 
     .opções {
@@ -137,5 +163,4 @@
     .container__texto {
         display: block;
     }
-
 }

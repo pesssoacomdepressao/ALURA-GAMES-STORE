@@ -1,0 +1,33 @@
+@import url("styles/header.css");
+@import url("styles/banner.css");
+@import url("styles/carrosel.css");
+@import url("styles/categorias.css");
+@import url("styles/contato.css");
+@import url("styles/rodape.css");
+
+:root {
+    --cor-de-fundo: #828fc9;
+    --cinza: #c7c7c7;
+    --cor-cabecalho: #529cb9;
+    --branco: #FFFFFF;
+    --preto: #000000;
+    --roxo-mais-claro: #D5CBF6;
+    --roxo-azulado: #211F39;
+    --rosa-lila: #6488bd;
+    --cor-botao: #42385B;
+    --roxo-claro: #8792b6;
+    --roxo-oscuro: #5C359B;
+    --roxo-letra-banner: #5E17EB;
+    --azul-marinho: #00bfbf;
+    --azul-degrade: linear-gradient(97.54deg, #002f52 35.49%, #326589 165.37%);
+    --fonte-principal: "Poppins";
+    --fonte-secundario: "Libre Baskerville";
+
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
